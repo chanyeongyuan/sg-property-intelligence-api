@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: sg-property-intelligence-api
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: DATAGOVSG_API_KEY
+        sync: false
+      - key: CACHE_TTL
+        value: 3600
+      - key: RATE_LIMIT_WINDOW
+        value: 60000
+      - key: RATE_LIMIT_MAX_REQUESTS
+        value: 100
+      - key: HUBSPOT_PORTAL_ID
+        value: 50444105

@@ -1,0 +1,38 @@
+{
+  "name": "sg-property-intelligence",
+  "version": "1.0.0",
+  "description": "Singapore Property Intelligence API - Real-time BTO, resale, and demographic insights for lead targeting",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "singapore",
+    "hdb",
+    "bto",
+    "property",
+    "real-estate",
+    "demographics",
+    "data.gov.sg",
+    "hubspot",
+    "lead-intelligence"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "dotenv": "^16.4.5",
+    "axios": "^1.6.7",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "node-cache": "^5.1.2",
+    "date-fns": "^3.0.0",
+    "@hubspot/api-client": "^11.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  }
+}
