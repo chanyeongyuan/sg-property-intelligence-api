@@ -12,6 +12,7 @@ import intelligenceRoutes from './routes/intelligence.js';
 import hubspotRoutes from './routes/hubspot.js';
 import privatePropertyRoutes from './routes/private-property.js';
 import { getCacheStats, clearCache } from './services/datagovsg.js';
+import { createSimulationApp } from './simulation/app.js';
 
 dotenv.config();
 
@@ -129,6 +130,7 @@ app.get('/health', (req, res) => {
 });
 
 // API Routes
+app.use('/api/simulation', createSimulationApp());
 app.use('/api/bto', btoRoutes);
 app.use('/api/resale', resaleRoutes);
 app.use('/api/demographics', demographicsRoutes);
